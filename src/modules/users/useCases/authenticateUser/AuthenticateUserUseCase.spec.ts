@@ -33,7 +33,7 @@ describe("User Authenticate", () => {
     expect(session).toHaveProperty("token");
   });
 
-  it("não deve ser capaz de criar sessão para e-mail inexistente", async () => {
+  it("should not be able to create session for non-existent email", async () => {
     await expect(async () => {
       await authenticateUserUseCase.execute({
         email: "vladimir@test.com",
